@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//th[@name='th_description']" position="before">
+            <th name="th_number" class="text-left">#</th>
+        </xpath>
+        <xpath expr="//td[@name='td_name']" position="before">
+
+           <td name="td_number"> <span t-field="line.number"/> </td>
+        </xpath>
+    </template>
+</odoo>
